@@ -1,0 +1,91 @@
+body {
+  background-color: #212529;
+}
+
+.navbar {
+  background-color: #0e2e3b;
+}
+
+.navbar-brand img {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.navbar-toggler span {
+  color: #e7e7e7;
+}
+
+.cartelera-section {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #e7e7e7;
+}
+
+.cartelera-section article {
+  width: 150px;
+  margin-top: 6px;
+  margin: 6px auto;
+}
+
+.cartelera-section article img {
+  width: 150px;
+  height: 220px;
+}
+
+.preventa {
+  background-color: #0e2e3b;
+  color: #e7e7e7;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 150px;
+}
+
+.tooltip:hover::before {
+  content: "Este es un tooltip";
+  background-color: yellow;
+  border: 1px solid black;
+  padding: 5px;
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+@media (max-width: 1400px) {
+  .cartelera-section {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cartelera-section {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cartelera-section {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cartelera-section {
+    width: 100%;
+  }
+}
+
+@media (max-width: 770px) {
+  .cartelera-section {
+    width: 100%;
+  }
+}
