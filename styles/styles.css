@@ -60,6 +60,19 @@ body {
   left: 0;
 }
 
+footer {
+  background-color: #0e2e3b;
+  margin-top: 10px;
+}
+
+.descripcion {
+  text-align: justify;
+}
+
+footer a {
+  text-decoration: none;
+}
+
 @media (max-width: 1400px) {
   .cartelera-section {
     width: 60%;
