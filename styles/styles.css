@@ -1,5 +1,7 @@
 body {
-  background-color: #212529;
+  /* background-color: #212529; */
+  background: rgb(33,37,41);
+  background: linear-gradient(135deg, rgba(33,37,41,1) 21%, rgba(64,0,1,1) 68%, rgba(143,13,11,1) 100%);
 }
 
 .navbar {
@@ -25,8 +27,9 @@ body {
 }
 
 .cartelera-section {
-  width: 50%;
+  /* width: 50%; */
   margin: 0 auto;
+  border-radius: 0.6em;
   background-color: #e7e7e7;
 }
 
