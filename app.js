@@ -5,13 +5,25 @@ const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 document.getElementById("search-form").addEventListener("submit", (event) => {
   event.preventDefault();
   const query = document.getElementById("search-input").value;
-  searchMovies(query);
+  const genre = document.getElementById("genre").value;
+  const year = document.getElementById("year").value;
+  searchMovies(query, genre, year);
 });
 
-async function searchMovies(query) {
-  const response = await fetch(
-    `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}`
-  );
+async function searchMovies(query, genre, year) {
+  let url;
+  if (query) {
+    url = `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}`;
+  } else {
+    url = `${BASE_URL}/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc`;
+  }
+  if (genre) {
+    url += `&with_genres=${genre}`;
+  }
+  if (year) {
+    url += `&primary_release_year=${year}`;
+  }
+  const response = await fetch(url);
   const data = await response.json();
   displayResults(data.results);
 }
@@ -20,9 +32,20 @@ function displayResults(movies) {
   const resultsDiv = document.getElementById("results");
   resultsDiv.innerHTML = "";
 
-  for (const movie of movies) {
-    const movieCard = createMovieCard(movie);
-    resultsDiv.appendChild(movieCard);
+  if (movies.length === 0) {
+    // Si no hay resultados, muestra un mensaje
+    const noResultsMsg = document.createElement("p");
+    noResultsMsg.innerHTML = `
+    
+            <h2 class="text-white">No se encontraron películas con los criterios de búsqueda proporcionados.</h2>
+    `;
+    resultsDiv.appendChild(noResultsMsg);
+  } else {
+    // Si hay resultados, muestra las tarjetas de películas
+    for (const movie of movies) {
+      const movieCard = createMovieCard(movie);
+      resultsDiv.appendChild(movieCard);
+    }
   }
 }
 
@@ -52,3 +75,30 @@ function createMovieCard(movie) {
   card.innerHTML = cardContent;
   return card;
 }
+
+document.getElementById("clear-btn").addEventListener("click", () => {
+  // Limpia los campos de búsqueda, género y año
+  document.getElementById("search-input").value = "";
+  document.getElementById("genre").value = "";
+  document.getElementById("year").value = "";
+
+  // Limpia los resultados de la búsqueda
+  document.getElementById("results").innerHTML = "";
+});
+
+async function fetchGenres() {
+  const response = await fetch(
+    `${BASE_URL}/genre/movie/list?api_key=${API_KEY}`
+  );
+  const data = await response.json();
+  const genreSelect = document.getElementById("genre");
+  data.genres.forEach((genre) => {
+    const option = document.createElement("option");
+    option.value = genre.id;
+    option.innerText = genre.name;
+    genreSelect.appendChild(option);
+  });
+}
+
+// Llama a fetchGenres cuando se carga la página
+document.addEventListener("DOMContentLoaded", fetchGenres);
