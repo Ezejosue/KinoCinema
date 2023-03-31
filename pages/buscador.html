@@ -17,6 +17,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
     <script src="../app.js" defer></script>
+    <link rel="stylesheet" href="../styles/navegador.css">
 </head>
 
 <body>
@@ -61,23 +62,22 @@
 
     <main class="container main-container my-4">
         <div class="container">
-            <form id="search-form" class="mb-4 my-2">
-                <div class="input-group">
+            <form id="search-form" class="mb-4 my-2 ">
+                <div class="input-group d-flex flex-row">
                     <input type="text" class="form-control" id="search-input" placeholder="Buscar películas..." />
-                    <button class="btn btn-primary" type="submit">Buscar</button>
-                    <button class="btn btn-secondary" id="clear-btn" type="button">Limpiar</button>
-
-                    <label for="genre">Género:</label>
-                    <select id="genre">
-                        <option value="">Todos</option>
-                        <!-- Opciones de género aquí -->
-                    </select>
-
-                    <label for="year">Año:</label>
-                    <input type="number" id="year" min="1900" max="2099" step="1" />
+                    <button class="btn  search" type="submit"><i class="bi bi-search"></i></button>
+                    <button class="btn clear" id="clear-btn" type="button"><i
+                            class="bi bi-caret-left-fill"></i></button>
                 </div>
-
             </form>
+            <div class="d-flex">
+                <select id="genre">
+                    <option value="">Todos</option>
+                    <!-- Opciones de género aquí -->
+                </select>
+
+                <input type="number" id="year" min="1900" max="2099" step="1" placeholder="2000" />
+            </div>
             <div id="results" class="container buscador row d-flex align-items-center justify-content-center">
                 <!-- Aquí se mostrarán las tarjetas de películas -->
             </div>
