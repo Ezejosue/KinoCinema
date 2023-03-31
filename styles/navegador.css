@@ -1,0 +1,38 @@
+.input-group > .form-control,
+.input-group > .form-floating,
+.input-group > .form-select {
+  width: 70%;
+  border-radius: 10px;
+}
+
+.search {
+  color: white;
+}
+
+.clear {
+  color: white;
+}
+
+@media screen and (max-width: 490px) {
+  /* Estilos específicos para pantallas de 490px hacia abajo */
+
+  .input-group {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .input-group > .form-control,
+  .input-group > .form-floating,
+  .input-group > .form-select {
+    width: 100%;
+  }
+
+  .search {
+    width: 25%;
+  }
+
+  .clear {
+    width: 25%;
+  }
+}
