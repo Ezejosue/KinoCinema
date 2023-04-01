@@ -36,6 +36,13 @@ body {
   color: #e7e7e7;
 }
 
+.login-button {
+  background-color: rgba(64, 0, 1, 1);
+  color: white;
+  margin: 0;
+  padding-top: 5%;
+}
+
 .main-container {
   flex: 1;
 }

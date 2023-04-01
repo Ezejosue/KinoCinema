@@ -55,6 +55,49 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Buscador</a>
                     </li>
+                    <li class="nav-item">
+                        <!-- Botón para abrir el modal de login -->
+                        <button type="button" class="btn btn-danger login-button" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">
+                            Iniciar sesión
+                        </button>
+
+                        <!-- Modal de login -->
+                        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Cerrar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="email"
+                                                    aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="password" class="form-label">Contraseña</label>
+                                                <input type="password" class="form-control" id="password">
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                                <label class="form-check-label" for="rememberMe">Recuérdame</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-primary">Iniciar sesión</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
