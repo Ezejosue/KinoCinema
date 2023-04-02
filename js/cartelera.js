@@ -72,13 +72,42 @@ function openReservationModal(movieTitle) {
 }
 
 // Llama a fetchMovies cuando se carga la página
-document.addEventListener("DOMContentLoaded", fetchMovies);
+// ...
 
-// Aleta de éxito
-document.getElementById("reserve-btn").addEventListener("click", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
+  fetchMovies();
+
+  // Obtiene el formulario y agrega el controlador de eventos
+  const form = document.getElementById("reservationModal");
+  form.addEventListener("submit", handleSubmit);
+
+  // Agrega un controlador de eventos al botón "Reservar"
+  document
+    .getElementById("reserve-btn")
+    .addEventListener("click", handleSubmit);
+});
+
+function handleSubmit(event) {
   event.preventDefault();
 
-  // Utiliza SweetAlert en lugar de alert() proporcionado por el navegador
+  // Obtiene los elementos de entrada del formulario
+  const movie = document.getElementById("movieTitle");
+  const date = document.getElementById("date");
+  const time = document.getElementById("time");
+
+  // Comprueba si los campos están vacíos
+  if (!movie.value || !date.value || !time.value) {
+    // Muestra una alerta de error si uno de los campos está vacío
+    swal({
+      title: "Error",
+      text: "Por favor, completa todos los campos.",
+      icon: "error",
+      button: "OK",
+    });
+    return; // Salir de la función si los campos no son válidos
+  }
+
+  // Utiliza SweetAlert en lugar de alert()
   swal({
     title: "¡Éxito!",
     text: "Reserva realizada con éxito.",
@@ -87,4 +116,4 @@ document.getElementById("reserve-btn").addEventListener("click", (event) => {
   }).then(() => {
     location.reload(); // Recarga la página después de cerrar la alerta
   });
-});
+}
