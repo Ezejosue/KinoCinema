@@ -77,6 +77,14 @@ document.addEventListener("DOMContentLoaded", fetchMovies);
 // Aleta de éxito
 document.getElementById("reserve-btn").addEventListener("click", (event) => {
   event.preventDefault();
-  alert("¡Reserva realizada con éxito!");
-  location.reload(); // Recarga la página
+
+  // Utiliza SweetAlert en lugar de alert() proporcionado por el navegador
+  swal({
+    title: "¡Éxito!",
+    text: "Reserva realizada con éxito.",
+    icon: "success",
+    button: "OK",
+  }).then(() => {
+    location.reload(); // Recarga la página después de cerrar la alerta
+  });
 });
