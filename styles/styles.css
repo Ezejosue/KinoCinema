@@ -30,6 +30,7 @@ body {
 
 .nav-link {
   color: white;
+  width: max-content;
 }
 
 .nav-link:hover{
@@ -39,11 +40,43 @@ body {
 }
 .navbar-brand:hover {
   color: #D0FEF5;
-  
 }
 
 .navbar-toggler span {
   color: #e7e7e7;
+}
+
+.login-button {
+  background-color: rgba(64, 0, 1, 1);
+  margin: 0;
+  width: max-content;
+}
+
+.modal-content {
+  background-color: #e8ecee;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.logo {
+  margin-left: auto;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.label-options {
+  text-align: center;
 }
 
 .main-container {
