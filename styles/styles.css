@@ -101,6 +101,18 @@ body {
   height: 220px;
 }
 
+.card {
+  background: rgba(255, 252, 252, 0) ;
+}
+
+.card-body {
+  background-color: rgba(255,255,255, 1);
+}
+
+.img-thumbnail {
+  background: rgba(33, 37, 41, 1) 21%;
+}
+
 .preventa {
   background-color: #0e2e3b;
   color: #e7e7e7;
