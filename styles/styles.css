@@ -32,6 +32,16 @@ body {
   color: white;
 }
 
+.nav-link:hover{
+  color: #D0FEF5;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+}
+.navbar-brand:hover {
+  color: #D0FEF5;
+  
+}
+
 .navbar-toggler span {
   color: #e7e7e7;
 }
@@ -40,12 +50,12 @@ body {
   flex: 1;
 }
 
-.cartelera-section {
-  /* width: 50%; */
+/* .cartelera-section {
+  /* width: 50%; 
   margin: 0 auto;
   border-radius: 0.6em;
   background-color: #e7e7e7;
-}
+} */
 
 .cartelera-section article {
   width: 150px;

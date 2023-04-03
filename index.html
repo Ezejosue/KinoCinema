@@ -20,7 +20,7 @@
 
 <body>
   <!-- Navegación -->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg ">
     <div class="container nav-container">
       <a class="navbar-brand" href="#"><img src="resources/Pastel Tosca Simple Unique Cinema Logo.svg" alt="logo" />
         KinoCinema</a>
@@ -29,35 +29,21 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Cartelera</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Próximos estrenos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Acerca de</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sobre nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/buscador.html">Buscador</a>
-          </li>
-        </ul>
+          <div class="navbar-nav">
+            <a class="nav-link mx-2" aria-current="page" href="#">Home</a>
+            <a class="nav-link mx-2" href="#">Inicio</a>
+            <a class="nav-link mx-2" href="#">Cartelera</a>
+            <a class="nav-link mx-2" href="#">Próximos estrenos</a>
+            <a class="nav-link mx-2" href="#">Contacto</a>
+            <a class="nav-link mx-2" href="#">Acerca de</a>
+            <a class="nav-link mx-2" href="pages/buscador.html">Buscador</a>
+          </div>
       </div>
     </div>
   </nav>
 
   <!-- Carrusel -->
-  <div id="carouselExampleControls" class="carousel slide mt-2" data-bs-ride="carousel">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="images/Banner-John-Wick-4.jpg" class="d-block w-100" alt="Estreno de John Wick" />
@@ -80,21 +66,34 @@
   </div>
 
   <!-- Cartelera -->
-  <div id="main-container" class="container bg-primary my-4">
+  <div id="main-container" class="container my-4">
     <section class="row cartelera-section">
       <div class="col-sm-3">
-        <div class="card text-center">
-          <div class="card-header">Featured</div>
+        <div class="card border-light">
+          <img class="img-thumbnail card-img-top" src="images/John-Wick-4.jpg" alt="">
           <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">
-              With supporting text below as a natural lead-in to additional
-              content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+              <div class="accordion" id="accordionAccessPhone">                
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingAccessPhone">
+                          <button class="accordion-button bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccessPhone" aria-expanded="true" aria-controls="collapseAccessPhone">
+                              Accesorios para teléfonos
+                          </button>
+                      </h2>
+                      <div id="collapseAccessPhone" class="accordion-collapse collapse" aria-labelledby="headingAccessPhone" data-bs-parent="#accordionAccessPhone">
+                          <div class="accordion-body">
+                              <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">Case-mate agarre magnético</li>
+                                  <li class="list-group-item">PopSockets</li>
+                                  <li class="list-group-item">Soporte de teléfono para vehículo</li>
+                                  <li class="list-group-item">Cargador inalámbrico</li>
+                                  <li class="list-group-item">Bocina Bose Bluetooth</li>
+                                </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div class="card-footer text-body-secondary">2 days ago</div>
-        </div>
+      </div>
       </div>
       <div class="col-sm-3">
         <div class="card text-center">
