@@ -1,0 +1,66 @@
+.descripcion_cine{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: #33a6d451;
+    box-shadow: 0px 0px 5px 10px rgba(51, 51, 51, 0.132);
+    padding: 4rem;
+}
+.informacionPag{
+    display: flex;
+}
+.texto{
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    width: 600px;
+    height: auto;
+}
+.imgCine1{
+    display: inline;
+    width: 510px;
+    height: auto;
+}
+.imgCine2{
+    display: inline;
+    width: 500px;
+    height: auto;
+}
+
+
+/* Para dispositivos móviles */
+@media (max-width: 600px) {
+    .imgCine1, .imgCine2 {
+      display: block;
+      margin: 0 auto;
+      clear: both;
+    }
+  }
+  
+  /* Para tabletas */
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .texto {
+      width: 100%;
+      float: none;
+      margin: 0 auto;
+    }
+    .imgCine1, .imgCine2 {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Para dispositivos de escritorio */
+  @media (min-width: 1025px) {
+    .texto {
+      width: 50%;
+      float: left;
+      margin-right: 2%;
+    }
+    .imgCine1, .imgCine2 {
+      width: 40%;
+      float: right;
+    }
+  }
+  
+  
