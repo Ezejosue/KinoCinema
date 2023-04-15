@@ -84,15 +84,13 @@ body {
   flex: 1;
 }
 
-/* .cartelera-section {
-  /* width: 50%; 
+.cartelera-section {
+ width: 100%; 
   margin: 0 auto;
   border-radius: 0.6em;
-  background-color: #e7e7e7;
-} */
+}
 
-.cartelera-section article {
-  width: 150px;
+/* .cartelera-section article {
   margin-top: 6px;
   margin: 6px auto;
 }
@@ -100,7 +98,7 @@ body {
 .cartelera-section article img {
   width: 150px;
   height: 220px;
-}
+} */
 
 .card {
   background: rgba(255, 252, 252, 0) ;
