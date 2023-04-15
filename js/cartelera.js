@@ -7,7 +7,23 @@ async function fetchMovies() {
     `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=es&primary_release_year=2023`
   );
   const data = await response.json();
-  displayMovies(data.results);
+  const moviesWithRatings = await Promise.all(
+    data.results.map(async (movie) => {
+      const details = await fetchMovieDetails(movie.id);
+      movie.classification = details.classification;
+      return movie;
+    })
+  );
+  displayMovies(moviesWithRatings);
+}
+
+async function fetchMovieDetails(movieId) {
+  const response = await fetch(
+    `${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=es`
+  );
+  const data = await response.json();
+  const classification = data.certification || "N/A";
+  return { classification };
 }
 
 function displayMovies(movies) {
@@ -58,7 +74,12 @@ function createMovieCard(movie) {
         <img src="${imagePath}" class="card-img-top" alt="${movie.title}">
         <div class="card-body">
           <h5 class="card-title">${movie.title}</h5>
-          <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#reservationModal" onclick="openReservationModal('${movie.title}')">Reservar</button>
+           <p class="card-text">Clasificación: ${
+             movie.classification || "N/A"
+           }</p>
+          <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#reservationModal" onclick="openReservationModal('${
+            movie.title
+          }')">Reservar</button>
         </div>
       </div>
     `;
