@@ -16,6 +16,7 @@
     display: inline-block;
     width: 600px;
     height: auto;
+    text-align: justify;
 }
 .texto::first-letter{
   font-size: 200%;
