@@ -1,3 +1,4 @@
+/* parrafos principales */
 .descripcion_cine{
     margin-top: 40px;
     margin-bottom: 40px;
@@ -16,6 +17,10 @@
     width: 600px;
     height: auto;
 }
+.texto::first-letter{
+  font-size: 200%;
+  font-family: 'Lobster', cursive;
+}
 .imgCine1{
     display: inline;
     width: 510px;
@@ -26,6 +31,65 @@
     width: 500px;
     height: auto;
 }
+
+.mi-linea-horizontal {
+  border: none;
+  border-top: 2px solid #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+/* las listas de valores, logros*/
+.valores_logros{
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.valores{
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.274);
+}
+.valores ul{
+  text-align: left;
+}
+.logros{
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.274);
+}
+.logros ul{
+  text-align: left;
+}
+
+
+/* mision */
+.mision{
+  color: white;
+}
+.mision h3{
+  text-align: center;
+}
+.mision p::first-letter{
+  font-size: 200%;
+  font-family: 'Lobster', cursive;
+}
+
+/* vision */
+.vision{
+  color: white;
+  margin-bottom: 2rem;
+}
+.vision h3{
+  text-align: center;
+}
+.vision p::first-letter{
+  font-size: 200%;
+  font-family: 'Lobster', cursive;
+}
+
 
 
 /* Para dispositivos móviles */
