@@ -1,0 +1,12 @@
+.card{
+    margin-top: 10px;
+}
+
+.card img {
+  height: 15rem;
+  transition: transform 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.2);
+}

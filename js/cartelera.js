@@ -4,7 +4,7 @@ const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
 async function fetchMovies() {
   const response = await fetch(
-    `${BASE_URL}/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc`
+    `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=es&primary_release_year=2023`
   );
   const data = await response.json();
   displayMovies(data.results);
@@ -58,7 +58,7 @@ function createMovieCard(movie) {
         <img src="${imagePath}" class="card-img-top" alt="${movie.title}">
         <div class="card-body">
           <h5 class="card-title">${movie.title}</h5>
-          <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#reservationModal" onclick="openReservationModal('${movie.title}')">Reservar</button>
+          <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#reservationModal" onclick="openReservationModal('${movie.title}')">Reservar</button>
         </div>
       </div>
     `;
