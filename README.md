@@ -32,9 +32,9 @@ Antes de empezar, asegúrate de tener instalado en tu ordenador:
 
 Para el correcto funcionamiento de la aplicación, necesitarás crear un archivo en la raíz del proyecto con las siguientes variables:
 
-API_KEY=your_api_key
-BASE_URL=https://api.themoviedb.org/3
-IMAGE_BASE_URL=https://image.tmdb.org/t/p/w500
+1. API_KEY=your_api_key
+2. BASE_URL=https://api.themoviedb.org/3
+3. IMAGE_BASE_URL=https://image.tmdb.org/t/p/w500
 
 ## Construido con
 
