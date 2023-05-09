@@ -53,6 +53,9 @@ body {
   width: max-content;
 }
 
+.modal.fade{
+  color: white;
+}
 
 .modal-content {
   background-color: #202425;
