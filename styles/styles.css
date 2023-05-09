@@ -34,13 +34,13 @@ body {
   width: max-content;
 }
 
-.nav-link:hover{
-  color: #D0FEF5;
+.nav-link:hover {
+  color: #d0fef5;
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
 }
 .navbar-brand:hover {
-  color: #D0FEF5;
+  color: #d0fef5;
 }
 
 .navbar-toggler span {
@@ -53,8 +53,9 @@ body {
   width: max-content;
 }
 
+
 .modal-content {
-  background-color: #e8ecee;
+  background-color: #202425;
 }
 
 .modal-header {
@@ -85,7 +86,7 @@ body {
 }
 
 .cartelera-section {
- width: 100%; 
+  width: 100%;
   margin: 0 auto;
   border-radius: 0.6em;
 }
@@ -101,14 +102,14 @@ body {
 } */
 
 .card {
-  background: rgba(255, 252, 252, 0) ;
+  background: rgba(255, 252, 252, 0);
 }
 
 .card-body {
-  background-color: rgba(255,255,255, 1);
+  background-color: rgba(255, 255, 255, 1);
 }
 
-.card-text{
+.card-text {
   text-align: justify;
 }
 
