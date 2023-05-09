@@ -127,7 +127,7 @@ function handleSubmit(event) {
   // Utiliza SweetAlert en lugar de alert()
   swal({
     title: "¡Éxito!",
-    text: "Reserva realizada con éxito.",
+    text: `Reserva para la película ${movie.value} realizada con éxito.`,
     icon: "success",
     button: "OK",
   }).then(() => {

@@ -140,3 +140,31 @@ seats.forEach((seat) => {
     }
   });
 });
+
+const modal = document.getElementById("reservationModal");
+$(modal).on("hidden.bs.modal", () => {
+  // Obtener todos los asientos ocupados
+  const occupiedSeats = document.querySelectorAll(".seat.occupied");
+
+  // Eliminar la clase "occupied" de todos los asientos ocupados
+  occupiedSeats.forEach((seat) => {
+    seat.classList.remove("occupied");
+  });
+
+  // Número de asientos para marcar como ocupados
+  const numOccupiedSeats = 10;
+
+  // Crear una matriz de índices de asientos
+  const seatIndexes = [...Array(rows * columns).keys()];
+
+  // Mezclar la matriz
+  for (let i = seatIndexes.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [seatIndexes[i], seatIndexes[j]] = [seatIndexes[j], seatIndexes[i]];
+  }
+
+  // Marcar los primeros N asientos como ocupados
+  for (let i = 0; i < numOccupiedSeats; i++) {
+    seats[seatIndexes[i]].classList.add("occupied");
+  }
+});
