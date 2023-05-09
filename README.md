@@ -1,5 +1,8 @@
-# KinoCinema
- 
+<div align=center> 
+ <h1> KINOCINEMA </h1>
+ <img src="resources/Pastel Tosca Simple Unique Cinema Logo2.svg"> 
+</div>
+
 
 El proyecto consiste en una página web que muestra una lista de películas en cartelera para el año 2023 y permite a los usuarios reservar entradas para una película en particular en una fecha y hora específica. La página consume la API de The Movie Database (TMDb) para obtener información sobre las películas, como su título, clasificación, imagen de portada y sinopsis. La página también utiliza SweetAlert para mostrar alertas de éxito y error cuando los usuarios intentan realizar una reserva.
 
