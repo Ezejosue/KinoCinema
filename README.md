@@ -47,8 +47,8 @@ IMAGE_BASE_URL=https://image.tmdb.org/t/p/w500
 
 ## Autor
 
-[Ezejosue] (https://github.com/Ezejosue) - Josué Ávalos
-[razmit] (https://github.com/razmit) - Rolin Azmitia
+- [Ezejosue](https://github.com/Ezejosue) - Josué Ávalos
+- [razmit](https://github.com/razmit) - Rolin Azmitia
 
 ## Licencia
 
