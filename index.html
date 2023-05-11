@@ -99,8 +99,76 @@
               </div>
             </div>
 
+            <!-- Modal de registro -->
+            <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Registrarse</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="register-email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="register-email"
+                          aria-describedby="register-email-help" placeholder="example@example.com">
+                        <div id="register-email-help" class="form-text">Ingresa tu correo electrónico.</div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="register-password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="register-password">
+                      </div>
+                      <div class="mb-3">
+                        <label for="register-confirm-password" class="form-label">Confirmar contraseña</label>
+                        <input type="password" class="form-control" id="register-confirm-password">
+                      </div>
+                      <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="register-agree-terms">
+                        <label class="form-check-label" for="register-agree-terms">Acepto los términos y
+                          condiciones</label>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Registrarse</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Modal de olvidaste tu clave -->
+            <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="forgotPasswordModalLabel">Recuperar contraseña</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="forgot-email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="forgot-email" aria-describedby="forgot-email-help">
+                        <div id="forgot-email-help" class="form-text">Ingresa el correo electrónico asociado a tu
+                          cuenta.</div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
       </div>
-    </div>
     </div>
   </nav>
 
@@ -402,7 +470,9 @@
   <!-- Bootstrap 5 JS y dependencias -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/closeMenu.js"></script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>
