@@ -35,35 +35,35 @@ function displayMovies(movies) {
   }
 }
 
+function selectTime(time) {
+  const timeDiv = document.querySelectorAll("#availableTimes div");
+  timeDiv.forEach((div) => {
+    if (div.innerText === time) {
+      div.classList.add("selected-time");
+    } else {
+      div.classList.remove("selected-time");
+    }
+  });
+  document.getElementById("time").value = time;
+}
+
 function displayAvailableTimes() {
   const availableTimes = ["10:00", "12:30", "15:00", "17:30", "20:00", "22:30"];
   const timesContainer = document.getElementById("availableTimes");
   timesContainer.innerHTML = "";
 
   availableTimes.forEach((time) => {
-    const timeButton = document.createElement("button");
-    timeButton.className = "btn btn-outline-primary mx-1 my-1";
-    timeButton.innerText = time;
-    timeButton.onclick = () => selectTime(time);
-    timesContainer.appendChild(timeButton);
+    const timeDiv = document.createElement("div");
+    timeDiv.className = "time mx-1 my-1";
+    timeDiv.innerText = time;
+    timeDiv.onclick = () => selectTime(time);
+    timesContainer.appendChild(timeDiv);
   });
-}
-
-function selectTime(time) {
-  const timeButtons = document.querySelectorAll("#availableTimes button");
-  timeButtons.forEach((button) => {
-    if (button.innerText === time) {
-      button.classList.add("selected-time");
-    } else {
-      button.classList.remove("selected-time");
-    }
-  });
-  document.getElementById("time").value = time;
 }
 
 function createMovieCard(movie) {
   const card = document.createElement("div");
-  card.className = "col";
+  card.className = "card col-md-4 col-lg-3 mb-4 my-2";
 
   const imagePath = movie.poster_path
     ? `${IMAGE_BASE_URL}${movie.poster_path}`
@@ -98,10 +98,6 @@ function openReservationModal(movieTitle) {
 document.addEventListener("DOMContentLoaded", () => {
   fetchMovies();
 
-  // Obtiene el formulario y agrega el controlador de eventos
-  const form = document.getElementById("reservationModal");
-  form.addEventListener("submit", handleSubmit);
-
   // Agrega un controlador de eventos al botón "Reservar"
   document
     .getElementById("reserve-btn")
@@ -131,7 +127,7 @@ function handleSubmit(event) {
   // Utiliza SweetAlert en lugar de alert()
   swal({
     title: "¡Éxito!",
-    text: "Reserva realizada con éxito.",
+    text: `Reserva para la película ${movie.value} realizada con éxito.`,
     icon: "success",
     button: "OK",
   }).then(() => {

@@ -102,3 +102,4 @@ async function fetchGenres() {
 
 // Llama a fetchGenres cuando se carga la página
 document.addEventListener("DOMContentLoaded", fetchGenres);
+

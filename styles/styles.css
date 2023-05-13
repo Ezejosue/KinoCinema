@@ -34,13 +34,13 @@ body {
   width: max-content;
 }
 
-.nav-link:hover{
-  color: #D0FEF5;
+.nav-link:hover {
+  color: #d0fef5;
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
 }
 .navbar-brand:hover {
-  color: #D0FEF5;
+  color: #d0fef5;
 }
 
 .navbar-toggler span {
@@ -53,8 +53,12 @@ body {
   width: max-content;
 }
 
+.modal.fade {
+  color: white;
+}
+
 .modal-content {
-  background-color: #e8ecee;
+  background-color: #202425;
 }
 
 .modal-header {
@@ -85,7 +89,7 @@ body {
 }
 
 .cartelera-section {
- width: 100%; 
+  width: 100%;
   margin: 0 auto;
   border-radius: 0.6em;
 }
@@ -101,25 +105,16 @@ body {
 } */
 
 .card {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #fff;
-  width: 400px; /* Change this value to your desired width */
-  height: 500px; /* Change this value to your desired height */
-}
-
-@media (max-width: 768px) {
-  .card {
-    width: 100%;
-    height: auto;
-  }
+  background: rgba(255, 252, 252, 0);
 }
 
 .card-body {
-  background-color: rgba(255,255,255, 1);
+  background-color: rgba(255, 255, 255, 1);
 }
 
-.card-text{
+.card-text {
   text-align: justify;
+  
 }
 
 .img-thumbnail {
@@ -135,14 +130,13 @@ body {
   width: 150px;
 }
 
-.tooltip:hover::before {
-  content: "Este es un tooltip";
-  background-color: yellow;
-  border: 1px solid black;
-  padding: 5px;
-  position: absolute;
-  top: -30px;
-  left: 0;
+.video-container {
+  max-width: 80%;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
 }
 
 footer {
@@ -174,6 +168,18 @@ footer a {
   .cartelera-section {
     width: 70%;
   }
+
+  .navbar {
+    font-size: 0.8em;
+  }
+
+  .login-button {
+    font-size: 1em;
+  }
+
+  .movie {
+    width: 33.3%;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -181,6 +187,14 @@ footer a {
     width: 100%;
   }
 }
+
+
+@media (max-width: 500px) {
+  .movie {
+    width: 100%;
+  }
+}
+
 
 @media (max-width: 770px) {
   .cartelera-section {
