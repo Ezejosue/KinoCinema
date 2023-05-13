@@ -114,6 +114,7 @@ body {
 
 .card-text {
   text-align: justify;
+  
 }
 
 .img-thumbnail {
@@ -167,6 +168,18 @@ footer a {
   .cartelera-section {
     width: 70%;
   }
+
+  .navbar {
+    font-size: 0.8em;
+  }
+
+  .login-button {
+    font-size: 1em;
+  }
+
+  .movie {
+    width: 33.3%;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -174,6 +187,14 @@ footer a {
     width: 100%;
   }
 }
+
+
+@media (max-width: 500px) {
+  .movie {
+    width: 100%;
+  }
+}
+
 
 @media (max-width: 770px) {
   .cartelera-section {
