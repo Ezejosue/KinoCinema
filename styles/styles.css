@@ -53,7 +53,7 @@ body {
   width: max-content;
 }
 
-.modal.fade{
+.modal.fade {
   color: white;
 }
 
@@ -129,14 +129,13 @@ body {
   width: 150px;
 }
 
-.tooltip:hover::before {
-  content: "Este es un tooltip";
-  background-color: yellow;
-  border: 1px solid black;
-  padding: 5px;
-  position: absolute;
-  top: -30px;
-  left: 0;
+.video-container {
+  max-width: 80%;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
 }
 
 footer {
