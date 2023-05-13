@@ -93,10 +93,26 @@ body {
     text-align: justify;
 
   }
-  
-  .card {
+
+/* .card {
+  width: 300px; /* Change this value to your desired width 
+  height: 400px; /* Change this value to your desired height 
+  margin: 10px;
+} */
+
+.card {
   background-color: rgba(255, 255, 255, 0.7);
   color: #fff;
+  width: 300px; /* Change this value to your desired width */
+  height: 400px; /* Change this value to your desired height */
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    height: auto;
+  }
 }
   .preventa {
     background-color: #0e2e3b;
